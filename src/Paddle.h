@@ -6,8 +6,9 @@ class Paddle{
     private:
     Vector2 pos;
     Vector2 size;
-    Color col = BLUE;
-    public:
+    Color col;
+    public: 
+    void Movement(Vector2 pos);
     void SetPos(Vector2 pos);
     void SetSize(Vector2 size);
     inline Vector2 GetPos(void){ return pos;};

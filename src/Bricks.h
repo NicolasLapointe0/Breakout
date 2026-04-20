@@ -2,17 +2,19 @@
 
 #include "raylib.h"
 
-class Ball{
-    private:
+
+class Bricks {
+ private:
     Vector2 pos;
     Vector2 size;
     Color col;
-    public:
-    float speed_x, speed_y;
-    void Movement(Vector2 pos, float speed_x, float speed_y);
-    void SetPos(Vector2 pos);
-    void SetSize(float radius);
+    bool is_active;
+    public: 
+    Bricks();
+    Bricks(Vector2 brick_pos, Vector2 brick_dim, Color color);
     inline Vector2 GetPos(void){ return pos;};
     inline Vector2 GetSize(void){ return size;};
     void Draw(void);
+    bool BrickStatus();
+    void SetActive(bool status);
 };
